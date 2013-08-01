@@ -8,6 +8,7 @@
     
   Version: 0.7 -  *Clicking the closing X now closes the whole game.
                   *Added "final boss" Heart. 
+                  *Fixed some bugs
       
   Version: 0.6 -  *Added white cell behaviors based on level
                   *Added random bonus t cell events with sound   
@@ -520,10 +521,10 @@ def instructions():
 """ The main method that intiates the game states."""            
 def main():
     donePlaying = False
-    Finalscore = 0
-    Lives = 10
-    alive = False
     while not donePlaying:
+        Finalscore = 0
+        Lives = 10
+        alive = False
         donePlaying = instructions()
         if not donePlaying:
             donePlaying, Finalscore, Lives = game(1, Finalscore, Lives)
