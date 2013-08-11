@@ -555,8 +555,6 @@ def instructions(splash):
             for i in range(len(insLabels)):
                     screen.blit(insLabels[i], (50, 30*i))  
             
-       
-
         pygame.display.flip()
         
     bacteria.sndMusic.stop()
@@ -577,7 +575,7 @@ def main():
         donePlaying = instructions(splash)
         splash = False
         if not donePlaying:
-            donePlaying, Finalscore, Lives = game(4, Finalscore, Lives)
+            donePlaying, Finalscore, Lives = game(1, Finalscore, Lives)
             if Lives > 0 and not donePlaying:
                 donePlaying, Finalscore, Lives = game(2, Finalscore, Lives)
                 if Lives > 0 and not donePlaying:
